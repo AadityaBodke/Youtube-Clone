@@ -1,0 +1,11 @@
+@import "./base";
+
+.app__container {
+  display: flex;
+  height: 90vh;
+}
+
+.app__main {
+  overflow-y: scroll;
+  background-color: $black-secondary;
+}

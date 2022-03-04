@@ -1,0 +1,47 @@
+@import "../../base";
+
+.comments {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-left: 0.2rem;
+
+  &__form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    img {
+      border-radius: 50%;
+      height: 2.5rem;
+    }
+
+    form {
+      flex: 1;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    input {
+      width: 100%;
+      margin-left: 0.5rem;
+      padding: 0.64rem;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid rgb(54, 54, 54);
+      color: #fff;
+    }
+
+    button {
+      background-color: rgb(54, 54, 54);
+      border: 1px solid rgb(54, 54, 54);
+      color: #fff;
+      padding: 0.6rem;
+    }
+  }
+
+  &__list {
+    margin-bottom: 2rem;
+  }
+}

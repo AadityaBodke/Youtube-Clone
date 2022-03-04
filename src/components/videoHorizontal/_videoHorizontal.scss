@@ -1,0 +1,44 @@
+@import "../../base";
+
+.videoHorizontal {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+
+  &__left {
+    position: relative;
+    img {
+      width: 10.5rem;
+      height: 6.5rem;
+    }
+
+    span {
+      background-color: #080808ec;
+      padding: 0.1rem 0.2rem;
+      text-align: center;
+      position: absolute;
+      bottom: 0.3rem;
+      right: 0.3rem;
+      font-size: 0.8rem;
+      border-radius: 0.15rem;
+    }
+  }
+
+  &__right {
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    margin-left: 0.6rem;
+  }
+
+  &__title {
+    color: #fff;
+    @include line-clamp(2);
+  }
+  &__details {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.2rem;
+  }
+}

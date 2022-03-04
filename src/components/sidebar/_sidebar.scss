@@ -1,0 +1,78 @@
+@import "../../base";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  height: 90vh;
+  padding-top: 2rem;
+  background-color: $black-primary;
+  transition: transform 0.2s ease-in;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  li {
+    list-style: none;
+    display: flex;
+    text-align: center;
+    padding: 0.6rem 1.5rem;
+    margin: 0.2rem 0;
+    cursor: pointer;
+
+    &.active {
+      background-color: $border-color;
+      color: $text-color;
+    }
+
+    span {
+      margin-left: 1rem;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+    }
+
+    &:hover {
+      background-color: $border-color;
+    }
+  }
+
+  &__auth {
+    padding: 0.6rem 1.5rem;
+    button {
+      background: transparent;
+      color: rgb(28, 107, 226);
+      border: 0.1px solid rgb(28, 107, 226);
+      padding: 0.5rem;
+      text-align: center;
+      width: 7rem;
+    }
+  }
+  hr {
+    color: $border-color;
+  }
+}
+
+@media (max-width: $breakpoint-medium) {
+  .sidebar {
+    width: 90px;
+    span {
+      display: none;
+    }
+    li {
+      justify-content: center;
+    }
+    &__auth {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 999;
+  }
+}

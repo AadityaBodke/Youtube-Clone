@@ -1,0 +1,95 @@
+@import "../../base";
+
+.channelHorizontal {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid $border-color;
+  margin: 0 2rem;
+
+  &__left {
+    margin: 1rem 5rem;
+    cursor: pointer;
+
+    img {
+      border-radius: 50%;
+      height: 12rem;
+    }
+  }
+
+  &__right {
+    h6 {
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    p {
+      font-weight: 400;
+      font-size: 0.9rem;
+
+      @include line-clamp(3);
+    }
+    span {
+      display: block;
+      padding-top: 1rem;
+    }
+  }
+}
+
+@media (max-width: 755px) {
+  .channelHorizontal {
+    border-bottom: 1px solid $border-color;
+
+    &__left {
+      margin: 0.5rem 2.5rem;
+
+      img {
+        height: 7rem;
+      }
+    }
+    &__right {
+      h6 {
+        color: #fff;
+        font-size: 0.9rem;
+      }
+      p {
+        font-weight: 400;
+        font-size: 0.7rem;
+
+        @include line-clamp(2);
+      }
+      span {
+        display: block;
+        padding-top: 0.5rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .channelHorizontal {
+    border-bottom: 1px solid $border-color;
+
+    &__left {
+      margin: 0.5rem 2.5rem;
+
+      img {
+        height: 4rem;
+      }
+    }
+    &__right {
+      padding: 1rem 0;
+      h6 {
+        color: #fff;
+        font-size: 0.9rem;
+      }
+      p {
+        display: none;
+      }
+      span {
+        display: block;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

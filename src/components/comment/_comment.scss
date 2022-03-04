@@ -1,0 +1,24 @@
+@import "../../base";
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 0.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid $border-color;
+
+  img {
+    border-radius: 50%;
+    height: 2.5rem;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+  }
+
+  &__header {
+    color: #fff;
+  }
+}
